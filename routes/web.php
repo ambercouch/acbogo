@@ -17,3 +17,8 @@ Route::get('/', function () {
 })->middleware(['auth.shopify'])->name('home');
 
 Route::get('shopify', 'ShopifyController@index')->middleware(['auth.shopify']);
+
+//twig template resources/views/hello.twig
+Route::get('twig', function () {
+    return View::make('twig');
+});
