@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class metafield_groups extends Model
+class Resources extends Model
 {
     //
 }

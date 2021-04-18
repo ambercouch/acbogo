@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\metafields;
+use App\Metafields;
 use Illuminate\Http\Request;
 
 class MetafieldsController extends Controller

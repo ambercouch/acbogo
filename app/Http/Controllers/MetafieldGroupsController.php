@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\metafield_groups;
+use App\MetafieldGoups;
 use Illuminate\Http\Request;
 
 class MetafieldGroupsController extends Controller

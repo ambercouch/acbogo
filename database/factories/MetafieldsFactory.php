@@ -5,7 +5,7 @@
 use App\metafields;
 use Faker\Generator as Faker;
 
-$factory->define(metafields::class, function (Faker $faker) {
+$factory->define(Metafields::class, function (Faker $faker) {
     return [
         //
     ];
