@@ -1,0 +1,15 @@
+
+<h1>Custom Fields For {{  resource.resource_name }} </h1>
+{% for group in metafield_groups %}
+<div class="c-mf-group">
+  <h2 class="c-mf-group__heading">
+    {{group.metafield_group_name}}
+  </h2>
+</div>
+
+{% endfor %}
+<div class="l-page--section">
+  <div class="c-control--add-group">
+    <a href="/resources/{{ resource.id }}/metafield_group/create" class="c-control__link">New Metafield Group</a>
+  </div>
+</div>

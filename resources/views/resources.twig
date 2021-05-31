@@ -1,0 +1,10 @@
+The resources list
+<br>
+<ul>
+{% for resource in resources %}
+  <li>
+    <a href="/resources/{{ resource.id }}/metafield_groups/">{{ resource.resource_name }}</a>
+  </li>
+{% endfor %}
+</ul>
+
