@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\MetafieldGoups;
+use App\MetafieldGroups;
+use App\Resources;
 use Illuminate\Http\Request;
+use App\Metafields;
+use Auth;
 
 class MetafieldGroupsController extends Controller
 {
@@ -12,9 +15,20 @@ class MetafieldGroupsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($resource_id)
     {
         //
+        $user_id = Auth::id();
+
+        $metafield_groups = MetafieldGroups::where('user_id', $user_id)
+                                           ->where('resource_id', $resource_id)
+                                           ->get();
+        $resource = Resources::where('id', $resource_id)->first();
+
+        $data['resource'] = $resource;
+        $data['metafield_groups'] = $metafield_groups;
+        $data['user_id']= $user_id;
+        return view('metafield_groups', $data);
     }
 
     /**
@@ -22,7 +36,7 @@ class MetafieldGroupsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($resource_id)
     {
         //
     }

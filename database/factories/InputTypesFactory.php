@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\MetafieldGroups;
+use App\InputTypes;
 use Faker\Generator as Faker;
 
-$factory->define(MetafieldGroups::class, function (Faker $faker) {
+$factory->define(InputTypes::class, function (Faker $faker) {
     return [
         //
     ];

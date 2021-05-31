@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMetafieldGroupsTable extends Migration
+class CreateMetafieldGroupResourceTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateMetafieldGroupsTable extends Migration
      */
     public function up()
     {
-        Schema::create('metafield_groups', function (Blueprint $table) {
-            $table->id();
-            $table->string('metafield_group_name');
-            $table->foreignId('user_id')->constrained();
+        Schema::create('metafield_group_resource', function (Blueprint $table) {
+            $table->foreignId('metafield_group')->constrained();
             $table->foreignId('resource_id')->constrained();
-            $table->timestamps();
         });
     }
 
@@ -29,6 +26,6 @@ class CreateMetafieldGroupsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('metafield_groups');
+        Schema::dropIfExists('metafield_metafield_group');
     }
 }
